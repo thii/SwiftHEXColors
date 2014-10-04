@@ -49,9 +49,9 @@ extension UIColor {
       blueHex = blueHex + blueHex
     }
 
-    var redHex = hex.substringToIndex(advance(hex.startIndex, 2))
-    var greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 2), end: advance(hex.startIndex, 4)))
-    var blueHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 4), end: advance(hex.startIndex, 6)))
+    let redHex = hex.substringToIndex(advance(hex.startIndex, 2))
+    let greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 2), end: advance(hex.startIndex, 4)))
+    let blueHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 4), end: advance(hex.startIndex, 6)))
     
     var redInt:   CUnsignedInt = 0
     var greenInt: CUnsignedInt = 0
