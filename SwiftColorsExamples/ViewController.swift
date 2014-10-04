@@ -33,7 +33,9 @@ class ViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
-  
+
+  @IBAction func colorOne(sender: UIButton) {
+    view.backgroundColor = UIColor(hexString: sender.titleLabel!.text!)
+  }
 }
 
