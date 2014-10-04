@@ -44,9 +44,7 @@ extension UIColor {
       var greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
       var blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
       
-      redHex = redHex + redHex
-      greenHex = greenHex + greenHex
-      blueHex = blueHex + blueHex
+      hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
     }
 
     let redHex = hex.substringToIndex(advance(hex.startIndex, 2))
