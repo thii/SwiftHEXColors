@@ -23,10 +23,24 @@
 import UIKit
 
 extension UIColor {
+  /**
+    Create non-autoreleased color with in the given hex string
+    Alpha will be set as 1 by default
+    
+    :param:   hexString
+    :returns: color with the given hex string
+  */
   convenience init(hexString: String) {
     self.init(hexString: hexString, alpha: 1.0)
   }
 
+  /**
+    Create non-autoreleased color with in the given hex string and alpha
+    
+    :param:   hexString
+    :param:   alpha
+    :returns: color with the given hex string and alpha
+  */
   convenience init(hexString: String, alpha: Float) {
     var hex = hexString
 
