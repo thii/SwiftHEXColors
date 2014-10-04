@@ -37,6 +37,17 @@ extension UIColor {
     
     // Check for string length
     assert(countElements(hex) == 6 || countElements(hex) == 3)
+    
+    // Deal with 3 character Hex strings
+    if countElements(hex) == 3 {
+      var redHex   = hex.substringToIndex(advance(hex.startIndex, 1))
+      var greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
+      var blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
+      
+      redHex = redHex + redHex
+      greenHex = greenHex + greenHex
+      blueHex = blueHex + blueHex
+    }
 
     var redHex = hex.substringToIndex(advance(hex.startIndex, 2))
     var greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 2), end: advance(hex.startIndex, 4)))
