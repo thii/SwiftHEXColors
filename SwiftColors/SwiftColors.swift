@@ -23,6 +23,10 @@
 import UIKit
 
 extension UIColor {
+  convenience init(hexString: String) {
+    self.init(hexString: hexString, alpha: 1.0)
+  }
+
   convenience init(hexString: String, alpha: Float) {
     var hex = hexString
 
