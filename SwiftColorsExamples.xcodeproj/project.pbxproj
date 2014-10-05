@@ -15,16 +15,6 @@
 		846C69EB19DFF4B100AB429E /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69EA19DFF4B100AB429E /* SwiftColors.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		846C69DB19DFF12F00AB429E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 846C69BD19DFF12F00AB429E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 846C69C419DFF12F00AB429E;
-			remoteInfo = SwiftColorsExamples;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		846C69C519DFF12F00AB429E /* SwiftColorsExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftColorsExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C69C919DFF12F00AB429E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -33,19 +23,11 @@
 		846C69CF19DFF12F00AB429E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846C69D119DFF12F00AB429E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		846C69D419DFF12F00AB429E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		846C69DA19DFF12F00AB429E /* SwiftColorsExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorsExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C69EA19DFF4B100AB429E /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftColors.swift; path = SwiftColors/SwiftColors.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		846C69C219DFF12F00AB429E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		846C69D719DFF12F00AB429E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				846C69C519DFF12F00AB429E /* SwiftColorsExamples.app */,
-				846C69DA19DFF12F00AB429E /* SwiftColorsExamplesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,24 +103,6 @@
 			productReference = 846C69C519DFF12F00AB429E /* SwiftColorsExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
-		846C69D919DFF12F00AB429E /* SwiftColorsExamplesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 846C69E719DFF12F00AB429E /* Build configuration list for PBXNativeTarget "SwiftColorsExamplesTests" */;
-			buildPhases = (
-				846C69D619DFF12F00AB429E /* Sources */,
-				846C69D719DFF12F00AB429E /* Frameworks */,
-				846C69D819DFF12F00AB429E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				846C69DC19DFF12F00AB429E /* PBXTargetDependency */,
-			);
-			name = SwiftColorsExamplesTests;
-			productName = SwiftColorsExamplesTests;
-			productReference = 846C69DA19DFF12F00AB429E /* SwiftColorsExamplesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -150,10 +113,6 @@
 				TargetAttributes = {
 					846C69C419DFF12F00AB429E = {
 						CreatedOnToolsVersion = 6.0.1;
-					};
-					846C69D919DFF12F00AB429E = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = 846C69C419DFF12F00AB429E;
 					};
 				};
 			};
@@ -171,7 +130,6 @@
 			projectRoot = "";
 			targets = (
 				846C69C419DFF12F00AB429E /* SwiftColorsExamples */,
-				846C69D919DFF12F00AB429E /* SwiftColorsExamplesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,13 +142,6 @@
 				846C69D019DFF12F00AB429E /* Main.storyboard in Resources */,
 				846C69D519DFF12F00AB429E /* LaunchScreen.xib in Resources */,
 				846C69D219DFF12F00AB429E /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		846C69D819DFF12F00AB429E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,22 +158,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		846C69D619DFF12F00AB429E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		846C69DC19DFF12F00AB429E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 846C69C419DFF12F00AB429E /* SwiftColorsExamples */;
-			targetProxy = 846C69DB19DFF12F00AB429E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		846C69CE19DFF12F00AB429E /* Main.storyboard */ = {
@@ -343,40 +279,6 @@
 			};
 			name = Release;
 		};
-		846C69E819DFF12F00AB429E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftColorsExamplesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftColorsExamples.app/SwiftColorsExamples";
-			};
-			name = Debug;
-		};
-		846C69E919DFF12F00AB429E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftColorsExamplesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftColorsExamples.app/SwiftColorsExamples";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -394,15 +296,6 @@
 			buildConfigurations = (
 				846C69E519DFF12F00AB429E /* Debug */,
 				846C69E619DFF12F00AB429E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		846C69E719DFF12F00AB429E /* Build configuration list for PBXNativeTarget "SwiftColorsExamplesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				846C69E819DFF12F00AB429E /* Debug */,
-				846C69E919DFF12F00AB429E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
