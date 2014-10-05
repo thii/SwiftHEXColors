@@ -1,4 +1,4 @@
-SwiftColors
+SwiftColors [![Build Status](https://travis-ci.org/thii/SwiftColors.png)](https://travis-ci.org/thii/SwiftColors)
 ===========
 
 HEX color handling as an extension for UIColor. Written in Swift.

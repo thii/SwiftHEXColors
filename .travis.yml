@@ -1,0 +1,5 @@
+# reference: http://www.objc.io/issue-6/travis-ci.html
+
+language: swift
+script:
+- xctool test -project SwiftColorsExamples.xcodeproj -scheme SwiftColorsExamples -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
