@@ -76,3 +76,14 @@ extension UIColor {
     self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
   }
 }
+
+extension UIColor: IntegerLiteralConvertible {
+  public class func convertFromIntegerLiteral(value: IntegerLiteralType) -> Self {
+    let red = CGFloat((value & 0xFF0000) >> 16) / 255.0
+    let green = CGFloat((value & 0x00FF00) >> 8) / 255.0
+    let blue = CGFloat(value & 0x0000FF) / 255.0
+    let alpha = CGFloat(1.0)
+    
+    return self(red: red, green: green, blue: blue, alpha: alpha)
+  }
+}
