@@ -78,6 +78,13 @@ extension UIColor {
 }
 
 extension UIColor: IntegerLiteralConvertible {
+  /*!
+    Create non-autoreleased color with the given hex value in Int
+    Alpha will be set as 1 by default
+    
+    :param:   value Hex value given in Int
+    :returns: color with the given hex value
+  */
   public class func convertFromIntegerLiteral(value: IntegerLiteralType) -> Self {
     let red = CGFloat((value & 0xFF0000) >> 16) / 255.0
     let green = CGFloat((value & 0x00FF00) >> 8) / 255.0
@@ -85,5 +92,61 @@ extension UIColor: IntegerLiteralConvertible {
     let alpha = CGFloat(1.0)
     
     return self(red: red, green: green, blue: blue, alpha: alpha)
+  }
+  
+  /*!
+    Create non-autoreleased color with the given hex value in Int and alpha
+    Example: let color: UIColor = (0xff0000).alpha(0.5)
+    
+    :param:   value Hex value given in Int
+    :returns: color with the given hex value and alpha
+  */
+  public func alpha(value:CGFloat) -> UIKit.UIColor {
+    var red: CGFloat = 0
+    var green: CGFloat = 0
+    var blue: CGFloat = 0
+    var alpha: CGFloat = 0
+    
+    self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+    
+    return UIKit.UIColor(red: red, green: green, blue: blue, alpha: value)
+  }
+}
+
+extension Int {
+  /*!
+    Use Integer literals in UIColor assigments
+    Example: let color: UIColor = (0xff0000).UIColor
+    
+    :returns: color with the given hex value in Int
+  */
+  public var UIColor: UIColor {
+    let red = CGFloat((value & 0xFF0000) >> 16) / 255.0
+    let green = CGFloat((value & 0x00FF00) >> 8) / 255.0
+    let blue = CGFloat(value & 0x0000FF) / 255.0
+    let alpha = CGFloat(1.0)
+    
+    return self(red: red, green: green, blue: blue, alpha: alpha)
+  }
+  
+  /*!
+    Use Integer literals in CGColor assigments
+    Example: let color: CGColor = (0xff0000).CGColor
+    
+    :returns: CGColor with the given hex value in Int
+  */
+  public var CGColor: CGColorRef {
+    return self.UIColor.CGColor
+  }
+  
+  /*!
+    Create non-autoreleased color with the given hex value in Int and alpha
+    Example: let color: UIColor = (0xff0000).alpha(0.5)
+    
+    :param:   value Hex value given in Int
+    :returns: color with the given hex value and alpha
+  */
+  public func alpha(value:CGFloat) -> UIColor {
+    return self.UIColor.alpha(value)
   }
 }
