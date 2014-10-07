@@ -16,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8322789D71413ACB2D0553E4 /* Pods-SwiftColorsExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftColorsExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftColorsExamples/Pods-SwiftColorsExamples.release.xcconfig"; sourceTree = "<group>"; };
 		846C69C519DFF12F00AB429E /* SwiftColorsExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftColorsExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C69C919DFF12F00AB429E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		846C69CA19DFF12F00AB429E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,8 +24,6 @@
 		846C69D119DFF12F00AB429E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		846C69D419DFF12F00AB429E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		846C69EA19DFF4B100AB429E /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftColors.swift; path = SwiftColors/SwiftColors.swift; sourceTree = SOURCE_ROOT; };
-		99F649C015CEBDDAF0454489 /* libPods-SwiftColorsExamples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftColorsExamples.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE5888370DD00852B367E1D7 /* Pods-SwiftColorsExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftColorsExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftColorsExamples/Pods-SwiftColorsExamples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,22 +37,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40850787C8E28768D1739DC4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CE5888370DD00852B367E1D7 /* Pods-SwiftColorsExamples.debug.xcconfig */,
-				8322789D71413ACB2D0553E4 /* Pods-SwiftColorsExamples.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		846C69BC19DFF12F00AB429E = {
 			isa = PBXGroup;
 			children = (
 				846C69C719DFF12F00AB429E /* SwiftColorsExamples */,
 				846C69C619DFF12F00AB429E /* Products */,
-				40850787C8E28768D1739DC4 /* Pods */,
-				C7B103CA87C0C0EB9761B499 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,14 +81,6 @@
 				846C69EA19DFF4B100AB429E /* SwiftColors.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		C7B103CA87C0C0EB9761B499 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				99F649C015CEBDDAF0454489 /* libPods-SwiftColorsExamples.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +261,6 @@
 		};
 		846C69E519DFF12F00AB429E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE5888370DD00852B367E1D7 /* Pods-SwiftColorsExamples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftColorsExamples/Info.plist;
@@ -294,7 +271,6 @@
 		};
 		846C69E619DFF12F00AB429E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8322789D71413ACB2D0553E4 /* Pods-SwiftColorsExamples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftColorsExamples/Info.plist;
