@@ -69,9 +69,9 @@ extension UIColor {
     var greenInt: CUnsignedInt = 0
     var blueInt:  CUnsignedInt = 0
 
-    NSScanner.scannerWithString(redHex).scanHexInt(&redInt)
-    NSScanner.scannerWithString(greenHex).scanHexInt(&greenInt)
-    NSScanner.scannerWithString(blueHex).scanHexInt(&blueInt)
+    NSScanner(string: redHex).scanHexInt(&redInt)
+    NSScanner(string: greenHex).scanHexInt(&greenInt)
+    NSScanner(string: blueHex).scanHexInt(&blueInt)
 
     self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
   }
