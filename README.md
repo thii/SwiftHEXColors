@@ -5,9 +5,6 @@ HEX color handling as an extension for UIColor. Written in Swift.
 
 # Examples
 ``` swift
-// Most simple way
-let colorFromInt: UIColor = 0x3ab976
-
 // With hash
 let color: UIColor = UIColor(hexString: "#ff8942")
 
