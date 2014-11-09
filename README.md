@@ -15,6 +15,17 @@ let secondColor: UIColor = UIColor(hexString: "ff8942", alpha: 0.5)
 let shortColorWithHex: UIColor = UIColor(hexString: "fff")
 ```
 
+For those who don't want to type the double quotation, you can init a color from a real hex value (an `Int`)
+
+```swift
+// With hash  
+let color: UIColor = UIColor(hex: 0xff8942)
+
+// Without hash, with alpha
+let secondColor: UIColor = UIColor(hex: 0xff8942, alpha: 0.5)
+```
+
+
 # Installation
 Just drop the SwiftColors.swift file into your project.
 
