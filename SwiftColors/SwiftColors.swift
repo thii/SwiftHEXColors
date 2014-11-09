@@ -75,4 +75,27 @@ extension UIColor {
 
     self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
   }
+
+  /**
+    Create non-autoreleased color with in the given hex value
+    Alpha will be set as 1 by default
+    
+    :param:   hex
+    :returns: color with the given hex value
+  */
+  convenience init(hex: Int) {
+    self.init(hex: hex, alpha: 1.0)
+  }
+  
+  /**
+    Create non-autoreleased color with in the given hex value and alpha
+    
+    :param:   hex
+    :param:   alpha
+    :returns: color with the given hex value and alpha
+  */
+  convenience init(hex: Int, alpha: Float) {
+    var hexString = NSString(format: "%2X", hex)
+    self.init(hexString: hexString, alpha: alpha)
+  }
 }
