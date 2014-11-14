@@ -4,6 +4,7 @@ SwiftColors [![Build Status](http://img.shields.io/travis/thii/SwiftColors.svg?s
 HEX color handling as an extension for UIColor. Written in Swift.
 
 # Examples
+## iOS
 ``` swift
 // With hash
 let color: UIColor = UIColor(hexString: "#ff8942")
@@ -25,15 +26,30 @@ let color: UIColor = UIColor(hex: 0xff8942)
 let secondColor: UIColor = UIColor(hex: 0xff8942, alpha: 0.5)
 ```
 
+## OSX
+``` swift
+// With hash
+let color: NSColor = NSColor(hexString: "#ff8942")
+
+// Without hash, with alpha
+let secondColor: NSColor = NSColor(hexString: "ff8942", alpha: 0.5)
+
+// Short handling
+let shortColorWithHex: NSColor = NSColor(hexString: "fff")
+
+// From a real hex value (an `Int`)
+// With hash  
+let color: NSColor = NSColor(hex: 0xff8942)
+
+// Without hash, with alpha
+let secondColor: NSColor = NSColor(hex: 0xff8942, alpha: 0.5)
+```
 
 # Installation
 Just drop the SwiftColors.swift file into your project.
 
 # Requirements
 iOS 7.0 or above.
-
-# To Do
-* [ ] Add support for Mac OS X
 
 # License
 [MIT](http://thi.mit-license.org/)
