@@ -36,7 +36,7 @@ extension SWColor {
     :param:   hexString
     :returns: color with the given hex string
   */
-  convenience init(hexString: String) {
+  convenience init?(hexString: String) {
     self.init(hexString: hexString, alpha: 1.0)
   }
 
@@ -47,7 +47,7 @@ extension SWColor {
     :param:   alpha
     :returns: color with the given hex string and alpha
   */
-  convenience init(hexString: String, alpha: Float) {
+  convenience init?(hexString: String, alpha: Float) {
     var hex = hexString
 
     // Check for hash and remove the hash
@@ -55,31 +55,39 @@ extension SWColor {
       hex = hex.substringFromIndex(advance(hex.startIndex, 1))
     }
     
-    // Check for string length
-    assert(countElements(hex) == 6 || countElements(hex) == 3)
+    if let match = hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) {
     
-    // Deal with 3 character Hex strings
-    if countElements(hex) == 3 {
-      var redHex   = hex.substringToIndex(advance(hex.startIndex, 1))
-      var greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
-      var blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
-      
-      hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
+        // Deal with 3 character Hex strings
+        if countElements(hex) == 3 {
+          var redHex   = hex.substringToIndex(advance(hex.startIndex, 1))
+          var greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
+          var blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
+          
+          hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
+        }
+
+        let redHex = hex.substringToIndex(advance(hex.startIndex, 2))
+        let greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 2), end: advance(hex.startIndex, 4)))
+        let blueHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 4), end: advance(hex.startIndex, 6)))
+        
+        var redInt:   CUnsignedInt = 0
+        var greenInt: CUnsignedInt = 0
+        var blueInt:  CUnsignedInt = 0
+
+        NSScanner(string: redHex).scanHexInt(&redInt)
+        NSScanner(string: greenHex).scanHexInt(&greenInt)
+        NSScanner(string: blueHex).scanHexInt(&blueInt)
+
+        self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
     }
-
-    let redHex = hex.substringToIndex(advance(hex.startIndex, 2))
-    let greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 2), end: advance(hex.startIndex, 4)))
-    let blueHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 4), end: advance(hex.startIndex, 6)))
-    
-    var redInt:   CUnsignedInt = 0
-    var greenInt: CUnsignedInt = 0
-    var blueInt:  CUnsignedInt = 0
-
-    NSScanner(string: redHex).scanHexInt(&redInt)
-    NSScanner(string: greenHex).scanHexInt(&greenInt)
-    NSScanner(string: blueHex).scanHexInt(&blueInt)
-
-    self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
+    else {
+        // Note:
+        // The swift 1.1 compiler is currently unable to destroy partially initialized classes in all cases,
+        // so it disallows formation of a situation where it would have to.  We consider this a bug to be fixed
+        // in future releases, not a feature. -- Apple Forum
+        self.init()
+        return nil
+    }
   }
 
   /**
@@ -89,7 +97,7 @@ extension SWColor {
     :param:   hex
     :returns: color with the given hex value
   */
-  convenience init(hex: Int) {
+  convenience init?(hex: Int) {
     self.init(hex: hex, alpha: 1.0)
   }
   
@@ -100,7 +108,7 @@ extension SWColor {
     :param:   alpha
     :returns: color with the given hex value and alpha
   */
-  convenience init(hex: Int, alpha: Float) {
+  convenience init?(hex: Int, alpha: Float) {
     var hexString = NSString(format: "%2X", hex)
     self.init(hexString: hexString, alpha: alpha)
   }
