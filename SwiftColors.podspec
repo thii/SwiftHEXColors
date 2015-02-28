@@ -6,7 +6,8 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { "SwiftHEXColors contributors" => "me@thi.codes" }
   s.source           = { :git => "https://github.com/thii/SwiftColors.git", :tag => s.version.to_s }
-  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
   s.requires_arc = true
   s.source_files = 'SwiftColors/SwiftColors.swift'
 end
