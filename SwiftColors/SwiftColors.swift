@@ -55,7 +55,7 @@ public extension SWColor {
       hex = hex.substringFromIndex(advance(hex.startIndex, 1))
     }
     
-    if let match = hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) {
+    if (hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) != nil) {
     
         // Deal with 3 character Hex strings
         if count(hex) == 3 {
