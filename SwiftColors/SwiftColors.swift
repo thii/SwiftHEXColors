@@ -58,7 +58,7 @@ public extension SWColor {
     if (hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) != nil) {
     
         // Deal with 3 character Hex strings
-        if count(hex) == 3 {
+        if hex.characters.count == 3 {
           let redHex   = hex.substringToIndex(advance(hex.startIndex, 1))
           let greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
           let blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
