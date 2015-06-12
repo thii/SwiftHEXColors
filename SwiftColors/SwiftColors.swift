@@ -59,9 +59,9 @@ public extension SWColor {
     
         // Deal with 3 character Hex strings
         if count(hex) == 3 {
-          var redHex   = hex.substringToIndex(advance(hex.startIndex, 1))
-          var greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
-          var blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
+          let redHex   = hex.substringToIndex(advance(hex.startIndex, 1))
+          let greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
+          let blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
           
           hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
         }
@@ -109,7 +109,7 @@ public extension SWColor {
     :returns: color with the given hex value and alpha
   */
   public convenience init?(hex: Int, alpha: Float) {
-    var hexString = NSString(format: "%2X", hex)
+    let hexString = NSString(format: "%2X", hex)
     self.init(hexString: hexString as String , alpha: alpha)
   }
 }
