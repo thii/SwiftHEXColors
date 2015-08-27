@@ -33,8 +33,8 @@ public extension SWColor {
     Create non-autoreleased color with in the given hex string
     Alpha will be set as 1 by default
     
-    :param:   hexString
-    :returns: color with the given hex string
+    - parameter   hexString:
+    - returns: color with the given hex string
   */
   public convenience init?(hexString: String) {
     self.init(hexString: hexString, alpha: 1.0)
@@ -43,32 +43,32 @@ public extension SWColor {
   /**
     Create non-autoreleased color with in the given hex string and alpha
     
-    :param:   hexString
-    :param:   alpha
-    :returns: color with the given hex string and alpha
+    - parameter   hexString:
+    - parameter   alpha:
+    - returns: color with the given hex string and alpha
   */
   public convenience init?(hexString: String, alpha: Float) {
     var hex = hexString
 
     // Check for hash and remove the hash
     if hex.hasPrefix("#") {
-      hex = hex.substringFromIndex(advance(hex.startIndex, 1))
+      hex = hex.substringFromIndex(hex.startIndex.advancedBy(1))
     }
     
     if (hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) != nil) {
     
         // Deal with 3 character Hex strings
         if hex.characters.count == 3 {
-          let redHex   = hex.substringToIndex(advance(hex.startIndex, 1))
-          let greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 1), end: advance(hex.startIndex, 2)))
-          let blueHex  = hex.substringFromIndex(advance(hex.startIndex, 2))
+            let redHex   = hex.substringToIndex(hex.startIndex.advancedBy(1))
+            let greenHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(1), end: hex.startIndex.advancedBy(2)))
+            let blueHex  = hex.substringFromIndex(hex.startIndex.advancedBy(2))
           
-          hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
+            hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
         }
 
-        let redHex = hex.substringToIndex(advance(hex.startIndex, 2))
-        let greenHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 2), end: advance(hex.startIndex, 4)))
-        let blueHex = hex.substringWithRange(Range<String.Index>(start: advance(hex.startIndex, 4), end: advance(hex.startIndex, 6)))
+        let redHex = hex.substringToIndex(hex.startIndex.advancedBy(2))
+        let greenHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(2), end: hex.startIndex.advancedBy(4)))
+        let blueHex = hex.substringWithRange(Range<String.Index>(start: hex.startIndex.advancedBy(4), end: hex.startIndex.advancedBy(6)))
         
         var redInt:   CUnsignedInt = 0
         var greenInt: CUnsignedInt = 0
@@ -94,8 +94,8 @@ public extension SWColor {
     Create non-autoreleased color with in the given hex value
     Alpha will be set as 1 by default
     
-    :param:   hex
-    :returns: color with the given hex value
+    - parameter   hex:
+    - returns: color with the given hex value
   */
   public convenience init?(hex: Int) {
     self.init(hex: hex, alpha: 1.0)
@@ -104,9 +104,9 @@ public extension SWColor {
   /**
     Create non-autoreleased color with in the given hex value and alpha
     
-    :param:   hex
-    :param:   alpha
-    :returns: color with the given hex value and alpha
+    - parameter   hex:
+    - parameter   alpha:
+    - returns: color with the given hex value and alpha
   */
   public convenience init?(hex: Int, alpha: Float) {
     let hexString = NSString(format: "%2X", hex)
