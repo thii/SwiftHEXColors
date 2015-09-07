@@ -48,6 +48,32 @@ let secondColor: NSColor = NSColor(hex: 0xff8942, alpha: 0.5)
 # Installation
 Just drop the SwiftColors.swift file into your project.
 
+or
+
+## Install using pod
+
+**podfile**
+``` 
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'RokuRemote' do
+    use_frameworks! # Add this if you are targeting iOS 8+ or using Swift
+    pod 'SwiftColors'
+end
+
+target 'RokuRemoteTests' do
+    use_frameworks! # Add this if you are targeting iOS 8+ or using Swift
+    pod 'SwiftColors'
+end
+```
+
+then
+
+``` bash
+pod install
+```
+
 # Requirements
 iOS 7.0 or above.
 
