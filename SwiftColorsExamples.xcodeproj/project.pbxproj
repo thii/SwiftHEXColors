@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		158B3DF51BB74FBB00F6EABE /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69EA19DFF4B100AB429E /* SwiftColors.swift */; };
 		15B3A14B1BB44780005ACC33 /* SwiftColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B3A14A1BB44780005ACC33 /* SwiftColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30541AEA1A3F9D95007E50CC /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69EA19DFF4B100AB429E /* SwiftColors.swift */; };
 		30541AEC1A3F9DB3007E50CC /* SwiftColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30541AEB1A3F9DB3007E50CC /* SwiftColorsTests.swift */; };
@@ -286,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158B3DF51BB74FBB00F6EABE /* SwiftColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +353,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SwiftColors/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = codes.thi.SwiftColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -374,7 +376,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SwiftColors/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = codes.thi.SwiftColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,6 +531,7 @@
 				15B3A14E1BB44780005ACC33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30541AE71A3F9D08007E50CC /* Build configuration list for PBXNativeTarget "SwiftColorsExamplesTests" */ = {
 			isa = XCConfigurationList;
