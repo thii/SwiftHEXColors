@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SwiftColors"
-  s.version          = "0.2.1"
+  s.version          = "0.3.0"
   s.summary          = "HEX color handling as an extension for UIColor. Written in Swift."
   s.homepage         = "https://github.com/thii/SwiftColors"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
