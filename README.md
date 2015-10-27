@@ -3,8 +3,8 @@ SwiftColors [![Build Status](http://img.shields.io/travis/thii/SwiftColors.svg?s
 
 HEX color handling as an extension for UIColor. Written in Swift.
 
-# Examples
-## iOS
+## Examples
+### iOS
 ``` swift
 // With hash
 let color: UIColor = UIColor(hexString: "#ff8942")
@@ -19,14 +19,14 @@ let shortColorWithHex: UIColor = UIColor(hexString: "fff")
 For those who don't want to type the double quotation, you can init a color from a real hex value (an `Int`)
 
 ```swift
-// With hash  
+// With hash
 let color: UIColor = UIColor(hex: 0xff8942)
 
 // Without hash, with alpha
 let secondColor: UIColor = UIColor(hex: 0xff8942, alpha: 0.5)
 ```
 
-## OSX
+### OSX
 ``` swift
 // With hash
 let color: NSColor = NSColor(hexString: "#ff8942")
@@ -38,41 +38,37 @@ let secondColor: NSColor = NSColor(hexString: "ff8942", alpha: 0.5)
 let shortColorWithHex: NSColor = NSColor(hexString: "fff")
 
 // From a real hex value (an `Int`)
-// With hash  
+// With hash
 let color: NSColor = NSColor(hex: 0xff8942)
 
 // Without hash, with alpha
 let secondColor: NSColor = NSColor(hex: 0xff8942, alpha: 0.5)
 ```
 
-# Installation
-Just drop the SwiftColors.swift file into your project.
+## Installation
 
-or
+### CocoaPods
 
-## Install using pod
+To integrate SwiftColors into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-**podfile**
-``` 
-# Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
 
-target 'RokuRemote' do
-    use_frameworks! # Add this if you are targeting iOS 8+ or using Swift
-    pod 'SwiftColors'
-end
-
-target 'RokuRemoteTests' do
-    use_frameworks! # Add this if you are targeting iOS 8+ or using Swift
-    pod 'SwiftColors'
-end
+pod 'SwiftColors'
 ```
 
-then
+Then, run the following command:
 
-``` bash
-pod install
+```bash
+$ pod install
 ```
+
+And add `import SwiftColors` to the top of the files using SwiftColors.
+
+### Manually
+- Drag and drop `SwiftColors.swift` file into your project
 
 # Requirements
 iOS 7.0 or above.
