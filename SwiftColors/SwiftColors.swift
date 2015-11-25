@@ -28,24 +28,24 @@
     typealias SWColor = NSColor
 #endif
 
+/// An extension of UIColor (on iOS) or NSColor (on OSX) providing HEX color handling.
 public extension SWColor {
     /**
-     Create non-autoreleased color with in the given hex string
-     Alpha will be set as 1 by default
+     Create non-autoreleased color with in the given hex string. Alpha will be set as 1 by default.
 
-     - parameter   hexString:
-     - returns: color with the given hex string
+     - parameter hexString: The hex string, with or without the hash character.
+     - returns: A color with the given hex string.
      */
     public convenience init?(hexString: String) {
         self.init(hexString: hexString, alpha: 1.0)
     }
 
     /**
-     Create non-autoreleased color with in the given hex string and alpha
+     Create non-autoreleased color with in the given hex string and alpha.
 
-     - parameter   hexString:
-     - parameter   alpha:
-     - returns: color with the given hex string and alpha
+     - parameter hexString: The hex string, with or without the hash character.
+     - parameter alpha: The alpha value, a floating value between 0 and 1.
+     - returns: A color with the given hex string and alpha.
      */
     public convenience init?(hexString: String, alpha: Float) {
         var hex = hexString
@@ -91,11 +91,10 @@ public extension SWColor {
     }
 
     /**
-     Create non-autoreleased color with in the given hex value
-     Alpha will be set as 1 by default
+     Create non-autoreleased color with in the given hex value. Alpha will be set as 1 by default.
 
-     - parameter   hex:
-     - returns: color with the given hex value
+     - parameter hex: The hex value. For example: 0xff8942 (no quotation).
+     - returns: A color with the given hex value
      */
     public convenience init?(hex: Int) {
         self.init(hex: hex, alpha: 1.0)
@@ -104,8 +103,8 @@ public extension SWColor {
     /**
      Create non-autoreleased color with in the given hex value and alpha
 
-     - parameter   hex:
-     - parameter   alpha:
+     - parameter hex: The hex value. For example: 0xff8942 (no quotation).
+     - parameter alpha: The alpha value, a floating value between 0 and 1.
      - returns: color with the given hex value and alpha
      */
     public convenience init?(hex: Int, alpha: Float) {
