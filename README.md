@@ -60,6 +60,8 @@ let secondColor: NSColor = NSColor(hex: 0xff8942, alpha: 0.5)
 Add this as a dependency in your `Package.swift`:
 
 ```swift
+import PackageDescription
+
 let package = Package(
     name: "MyPackage",
         dependencies: [
