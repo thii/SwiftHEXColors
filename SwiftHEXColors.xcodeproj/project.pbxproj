@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		84B79F8B1C058E4400CAF4AA /* SwiftHEXColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B79F8A1C058E4400CAF4AA /* SwiftHEXColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		84B79F931C058E8800CAF4AA /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B79F921C058E8800CAF4AA /* SwiftHEXColors.swift */; };
+		84B9178E1C16AF410027D398 /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9178D1C16AF410027D398 /* SwiftHEXColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84B79F871C058E4400CAF4AA /* SwiftHEXColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHEXColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B79F8A1C058E4400CAF4AA /* SwiftHEXColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftHEXColors.h; sourceTree = "<group>"; };
 		84B79F8C1C058E4400CAF4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84B79F921C058E8800CAF4AA /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
+		84B9178D1C16AF410027D398 /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftHEXColors.swift; path = Sources/SwiftHEXColors.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				84B79F8A1C058E4400CAF4AA /* SwiftHEXColors.h */,
-				84B79F921C058E8800CAF4AA /* SwiftHEXColors.swift */,
+				84B9178D1C16AF410027D398 /* SwiftHEXColors.swift */,
 				84B79F8C1C058E4400CAF4AA /* Info.plist */,
 			);
 			path = SwiftHEXColors;
@@ -132,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B79F931C058E8800CAF4AA /* SwiftHEXColors.swift in Sources */,
+				84B9178E1C16AF410027D398 /* SwiftHEXColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
