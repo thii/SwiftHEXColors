@@ -4,7 +4,7 @@ SwiftHEXColors
 [![Build Status](http://img.shields.io/travis/thii/SwiftHEXColors.svg?style=flat)](https://travis-ci.org/thii/SwiftHEXColors)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/SwiftHEXColors.svg)](https://img.shields.io/cocoapods/v/SwiftHEXColors.svg)
-[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftHEXColors.svg)](http://cocoadocs.org/docsets/SwiftHEXColors)
+[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftColors.svg)](http://cocoadocs.org/docsets/SwiftHEXColors)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftHEXColors.svg?style=flat)](http://cocoadocs.org/docsets/SwiftHEXColors)
 [![License](https://img.shields.io/cocoapods/l/SwiftHEXColors.svg)](https://raw.githubusercontent.com/thii/SwiftHEXColors/master/LICENSE)
