@@ -2,6 +2,7 @@ SwiftHEXColors
 ===========
 
 [![Build Status](http://img.shields.io/travis/thii/SwiftHEXColors.svg?style=flat)](https://travis-ci.org/thii/SwiftHEXColors)
+[![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/SwiftHEXColors.svg)](https://img.shields.io/cocoapods/v/SwiftHEXColors.svg)
 [![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftHEXColors.svg)](http://cocoadocs.org/docsets/SwiftHEXColors)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -53,6 +54,20 @@ let secondColor: NSColor = NSColor(hex: 0xff8942, alpha: 0.5)
 ```
 
 ## Installation
+
+### Swift Package Manager
+
+Add this as a dependency in your `Package.swift`:
+
+```swift
+let package = Package(
+    name: "MyPackage",
+        dependencies: [
+        // Other dependencies
+        .Package(url: "https://github.com/thii/SwiftHEXColors.git", majorVersion: 1)
+    ]
+)
+```
 
 ### CocoaPods
 
