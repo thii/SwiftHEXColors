@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30541AEA1A3F9D95007E50CC /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69EA19DFF4B100AB429E /* SwiftColors.swift */; };
-		30541AEC1A3F9DB3007E50CC /* SwiftColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30541AEB1A3F9DB3007E50CC /* SwiftColorsTests.swift */; };
+		30541AEA1A3F9D95007E50CC /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69EA19DFF4B100AB429E /* SwiftHEXColors.swift */; };
+		30541AEC1A3F9DB3007E50CC /* SwiftHEXColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30541AEB1A3F9DB3007E50CC /* SwiftHEXColorsTests.swift */; };
 		846C69CB19DFF12F00AB429E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69CA19DFF12F00AB429E /* AppDelegate.swift */; };
 		846C69CD19DFF12F00AB429E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69CC19DFF12F00AB429E /* ViewController.swift */; };
 		846C69D019DFF12F00AB429E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C69CE19DFF12F00AB429E /* Main.storyboard */; };
 		846C69D219DFF12F00AB429E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846C69D119DFF12F00AB429E /* Images.xcassets */; };
 		846C69D519DFF12F00AB429E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846C69D319DFF12F00AB429E /* LaunchScreen.xib */; };
-		846C69EB19DFF4B100AB429E /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69EA19DFF4B100AB429E /* SwiftColors.swift */; };
+		846C69EB19DFF4B100AB429E /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C69EA19DFF4B100AB429E /* SwiftHEXColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,22 +23,22 @@
 			containerPortal = 846C69BD19DFF12F00AB429E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 846C69C419DFF12F00AB429E;
-			remoteInfo = SwiftColorsExamples;
+			remoteInfo = SwiftHEXColorsExamples;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		30541ADF1A3F9D08007E50CC /* SwiftColorsExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorsExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30541ADF1A3F9D08007E50CC /* SwiftHEXColorsExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftHEXColorsExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30541AE21A3F9D08007E50CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30541AEB1A3F9DB3007E50CC /* SwiftColorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorsTests.swift; sourceTree = "<group>"; };
-		846C69C519DFF12F00AB429E /* SwiftColorsExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftColorsExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30541AEB1A3F9DB3007E50CC /* SwiftHEXColorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColorsTests.swift; sourceTree = "<group>"; };
+		846C69C519DFF12F00AB429E /* SwiftHEXColorsExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftHEXColorsExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C69C919DFF12F00AB429E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		846C69CA19DFF12F00AB429E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846C69CC19DFF12F00AB429E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		846C69CF19DFF12F00AB429E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846C69D119DFF12F00AB429E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		846C69D419DFF12F00AB429E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		846C69EA19DFF4B100AB429E /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftColors.swift; path = SwiftColors/SwiftColors.swift; sourceTree = SOURCE_ROOT; };
+		846C69EA19DFF4B100AB429E /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftHEXColors.swift; path = SwiftHEXColors/SwiftHEXColors.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +59,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30541AE01A3F9D08007E50CC /* SwiftColorsExamplesTests */ = {
+		30541AE01A3F9D08007E50CC /* SwiftHEXColorsExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
-				30541AEB1A3F9DB3007E50CC /* SwiftColorsTests.swift */,
+				30541AEB1A3F9DB3007E50CC /* SwiftHEXColorsTests.swift */,
 				30541AE11A3F9D08007E50CC /* Supporting Files */,
 			);
-			path = SwiftColorsExamplesTests;
+			path = SwiftHEXColorsExamplesTests;
 			sourceTree = "<group>";
 		};
 		30541AE11A3F9D08007E50CC /* Supporting Files */ = {
@@ -79,8 +79,8 @@
 		846C69BC19DFF12F00AB429E = {
 			isa = PBXGroup;
 			children = (
-				846C69C719DFF12F00AB429E /* SwiftColorsExamples */,
-				30541AE01A3F9D08007E50CC /* SwiftColorsExamplesTests */,
+				846C69C719DFF12F00AB429E /* SwiftHEXColorsExamples */,
+				30541AE01A3F9D08007E50CC /* SwiftHEXColorsExamplesTests */,
 				846C69C619DFF12F00AB429E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,13 +88,13 @@
 		846C69C619DFF12F00AB429E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				846C69C519DFF12F00AB429E /* SwiftColorsExamples.app */,
-				30541ADF1A3F9D08007E50CC /* SwiftColorsExamplesTests.xctest */,
+				846C69C519DFF12F00AB429E /* SwiftHEXColorsExamples.app */,
+				30541ADF1A3F9D08007E50CC /* SwiftHEXColorsExamplesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		846C69C719DFF12F00AB429E /* SwiftColorsExamples */ = {
+		846C69C719DFF12F00AB429E /* SwiftHEXColorsExamples */ = {
 			isa = PBXGroup;
 			children = (
 				846C69EC19DFF4C700AB429E /* Extensions */,
@@ -105,7 +105,7 @@
 				846C69D319DFF12F00AB429E /* LaunchScreen.xib */,
 				846C69C819DFF12F00AB429E /* Supporting Files */,
 			);
-			path = SwiftColorsExamples;
+			path = SwiftHEXColorsExamples;
 			sourceTree = "<group>";
 		};
 		846C69C819DFF12F00AB429E /* Supporting Files */ = {
@@ -119,7 +119,7 @@
 		846C69EC19DFF4C700AB429E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				846C69EA19DFF4B100AB429E /* SwiftColors.swift */,
+				846C69EA19DFF4B100AB429E /* SwiftHEXColors.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30541ADE1A3F9D08007E50CC /* SwiftColorsExamplesTests */ = {
+		30541ADE1A3F9D08007E50CC /* SwiftHEXColorsExamplesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30541AE71A3F9D08007E50CC /* Build configuration list for PBXNativeTarget "SwiftColorsExamplesTests" */;
+			buildConfigurationList = 30541AE71A3F9D08007E50CC /* Build configuration list for PBXNativeTarget "SwiftHEXColorsExamplesTests" */;
 			buildPhases = (
 				30541ADB1A3F9D08007E50CC /* Sources */,
 				30541ADC1A3F9D08007E50CC /* Frameworks */,
@@ -140,14 +140,14 @@
 			dependencies = (
 				30541AE61A3F9D08007E50CC /* PBXTargetDependency */,
 			);
-			name = SwiftColorsExamplesTests;
-			productName = SwiftColorsExamplesTests;
-			productReference = 30541ADF1A3F9D08007E50CC /* SwiftColorsExamplesTests.xctest */;
+			name = SwiftHEXColorsExamplesTests;
+			productName = SwiftHEXColorsExamplesTests;
+			productReference = 30541ADF1A3F9D08007E50CC /* SwiftHEXColorsExamplesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		846C69C419DFF12F00AB429E /* SwiftColorsExamples */ = {
+		846C69C419DFF12F00AB429E /* SwiftHEXColorsExamples */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 846C69E419DFF12F00AB429E /* Build configuration list for PBXNativeTarget "SwiftColorsExamples" */;
+			buildConfigurationList = 846C69E419DFF12F00AB429E /* Build configuration list for PBXNativeTarget "SwiftHEXColorsExamples" */;
 			buildPhases = (
 				846C69C119DFF12F00AB429E /* Sources */,
 				846C69C219DFF12F00AB429E /* Frameworks */,
@@ -157,9 +157,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftColorsExamples;
-			productName = SwiftColorsExamples;
-			productReference = 846C69C519DFF12F00AB429E /* SwiftColorsExamples.app */;
+			name = SwiftHEXColorsExamples;
+			productName = SwiftHEXColorsExamples;
+			productReference = 846C69C519DFF12F00AB429E /* SwiftHEXColorsExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 846C69C019DFF12F00AB429E /* Build configuration list for PBXProject "SwiftColorsExamples" */;
+			buildConfigurationList = 846C69C019DFF12F00AB429E /* Build configuration list for PBXProject "SwiftHEXColorsExamples" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -194,8 +194,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				846C69C419DFF12F00AB429E /* SwiftColorsExamples */,
-				30541ADE1A3F9D08007E50CC /* SwiftColorsExamplesTests */,
+				846C69C419DFF12F00AB429E /* SwiftHEXColorsExamples */,
+				30541ADE1A3F9D08007E50CC /* SwiftHEXColorsExamplesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,8 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30541AEC1A3F9DB3007E50CC /* SwiftColorsTests.swift in Sources */,
-				30541AEA1A3F9D95007E50CC /* SwiftColors.swift in Sources */,
+				30541AEC1A3F9DB3007E50CC /* SwiftHEXColorsTests.swift in Sources */,
+				30541AEA1A3F9D95007E50CC /* SwiftHEXColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +236,7 @@
 			files = (
 				846C69CD19DFF12F00AB429E /* ViewController.swift in Sources */,
 				846C69CB19DFF12F00AB429E /* AppDelegate.swift in Sources */,
-				846C69EB19DFF4B100AB429E /* SwiftColors.swift in Sources */,
+				846C69EB19DFF4B100AB429E /* SwiftHEXColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +245,7 @@
 /* Begin PBXTargetDependency section */
 		30541AE61A3F9D08007E50CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 846C69C419DFF12F00AB429E /* SwiftColorsExamples */;
+			target = 846C69C419DFF12F00AB429E /* SwiftHEXColorsExamples */;
 			targetProxy = 30541AE51A3F9D08007E50CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -282,11 +282,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SwiftColorsExamplesTests/Info.plist;
+				INFOPLIST_FILE = SwiftHEXColorsExamplesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftColorsExamples.app/SwiftColorsExamples";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftHEXColorsExamples.app/SwiftHEXColorsExamples";
 			};
 			name = Debug;
 		};
@@ -298,11 +298,11 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SwiftColorsExamplesTests/Info.plist;
+				INFOPLIST_FILE = SwiftHEXColorsExamplesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftColorsExamples.app/SwiftColorsExamples";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftHEXColorsExamples.app/SwiftHEXColorsExamples";
 			};
 			name = Release;
 		};
@@ -389,7 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SwiftColorsExamples/Info.plist;
+				INFOPLIST_FILE = SwiftHEXColorsExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -399,7 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SwiftColorsExamples/Info.plist;
+				INFOPLIST_FILE = SwiftHEXColorsExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -408,7 +408,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		30541AE71A3F9D08007E50CC /* Build configuration list for PBXNativeTarget "SwiftColorsExamplesTests" */ = {
+		30541AE71A3F9D08007E50CC /* Build configuration list for PBXNativeTarget "SwiftHEXColorsExamplesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30541AE81A3F9D08007E50CC /* Debug */,
@@ -417,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		846C69C019DFF12F00AB429E /* Build configuration list for PBXProject "SwiftColorsExamples" */ = {
+		846C69C019DFF12F00AB429E /* Build configuration list for PBXProject "SwiftHEXColorsExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				846C69E219DFF12F00AB429E /* Debug */,
@@ -426,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		846C69E419DFF12F00AB429E /* Build configuration list for PBXNativeTarget "SwiftColorsExamples" */ = {
+		846C69E419DFF12F00AB429E /* Build configuration list for PBXNativeTarget "SwiftHEXColorsExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				846C69E519DFF12F00AB429E /* Debug */,
