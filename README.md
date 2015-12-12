@@ -108,7 +108,7 @@ To integrate SwiftHEXColors into your Xcode project using Carthage, specify it i
 github "thii/SwiftHEXColors"
 ```
 
-Run `carthage` to build the framework and drag the built `SwiftHEXColors.framework` into your Xcode project.
+Run `carthage update` to build the framework and drag the built `SwiftHEXColors.framework` into your Xcode project.
 
 ### Manually
 - Drag and drop `SwiftHEXColors.swift` file into your project
