@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844B37121C561B0B009DC82F /* SwiftHEXColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B37111C561B0B009DC82F /* SwiftHEXColorsTests.swift */; };
+		844B37141C561B0B009DC82F /* SwiftHEXColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B79F871C058E4400CAF4AA /* SwiftHEXColors.framework */; };
 		84B79F8B1C058E4400CAF4AA /* SwiftHEXColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B79F8A1C058E4400CAF4AA /* SwiftHEXColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84B9178E1C16AF410027D398 /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9178D1C16AF410027D398 /* SwiftHEXColors.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		844B37151C561B0B009DC82F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B79F7E1C058E4400CAF4AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B79F861C058E4400CAF4AA;
+			remoteInfo = SwiftHEXColors;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		844B370F1C561B0B009DC82F /* SwiftHEXColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftHEXColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844B37111C561B0B009DC82F /* SwiftHEXColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHEXColorsTests.swift; sourceTree = "<group>"; };
+		844B37131C561B0B009DC82F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B79F871C058E4400CAF4AA /* SwiftHEXColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHEXColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B79F8A1C058E4400CAF4AA /* SwiftHEXColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftHEXColors.h; sourceTree = "<group>"; };
 		84B79F8C1C058E4400CAF4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -19,6 +34,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		844B370C1C561B0B009DC82F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844B37141C561B0B009DC82F /* SwiftHEXColors.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84B79F831C058E4400CAF4AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,11 +52,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844B370A1C561A38009DC82F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				844B37131C561B0B009DC82F /* Info.plist */,
+				844B37111C561B0B009DC82F /* SwiftHEXColorsTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		84B79F7D1C058E4400CAF4AA = {
 			isa = PBXGroup;
 			children = (
 				84B79F881C058E4400CAF4AA /* Products */,
 				84B79F891C058E4400CAF4AA /* Sources */,
+				844B370A1C561A38009DC82F /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				84B79F871C058E4400CAF4AA /* SwiftHEXColors.framework */,
+				844B370F1C561B0B009DC82F /* SwiftHEXColorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +103,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		844B370E1C561B0B009DC82F /* SwiftHEXColorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844B37191C561B0B009DC82F /* Build configuration list for PBXNativeTarget "SwiftHEXColorsTests" */;
+			buildPhases = (
+				844B370B1C561B0B009DC82F /* Sources */,
+				844B370C1C561B0B009DC82F /* Frameworks */,
+				844B370D1C561B0B009DC82F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844B37161C561B0B009DC82F /* PBXTargetDependency */,
+			);
+			name = SwiftHEXColorsTests;
+			productName = SwiftHEXColorsTests;
+			productReference = 844B370F1C561B0B009DC82F /* SwiftHEXColorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		84B79F861C058E4400CAF4AA /* SwiftHEXColors */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84B79F8F1C058E4400CAF4AA /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */;
@@ -93,8 +145,12 @@
 		84B79F7E1C058E4400CAF4AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				TargetAttributes = {
+					844B370E1C561B0B009DC82F = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					84B79F861C058E4400CAF4AA = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
@@ -113,11 +169,19 @@
 			projectRoot = "";
 			targets = (
 				84B79F861C058E4400CAF4AA /* SwiftHEXColors */,
+				844B370E1C561B0B009DC82F /* SwiftHEXColorsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		844B370D1C561B0B009DC82F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84B79F851C058E4400CAF4AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +192,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		844B370B1C561B0B009DC82F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844B37121C561B0B009DC82F /* SwiftHEXColorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84B79F821C058E4400CAF4AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,7 +210,37 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		844B37161C561B0B009DC82F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B79F861C058E4400CAF4AA /* SwiftHEXColors */;
+			targetProxy = 844B37151C561B0B009DC82F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		844B37171C561B0B009DC82F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.thi.SwiftHEXColorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		844B37181C561B0B009DC82F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.thi.SwiftHEXColorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		84B79F8D1C058E4400CAF4AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -266,6 +368,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		844B37191C561B0B009DC82F /* Build configuration list for PBXNativeTarget "SwiftHEXColorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844B37171C561B0B009DC82F /* Debug */,
+				844B37181C561B0B009DC82F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		84B79F811C058E4400CAF4AA /* Build configuration list for PBXProject "SwiftHEXColors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
