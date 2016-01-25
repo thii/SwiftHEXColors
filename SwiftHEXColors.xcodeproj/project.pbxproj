@@ -15,7 +15,7 @@
 		84B79F871C058E4400CAF4AA /* SwiftHEXColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHEXColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B79F8A1C058E4400CAF4AA /* SwiftHEXColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftHEXColors.h; sourceTree = "<group>"; };
 		84B79F8C1C058E4400CAF4AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84B9178D1C16AF410027D398 /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftHEXColors.swift; path = Sources/SwiftHEXColors.swift; sourceTree = SOURCE_ROOT; };
+		84B9178D1C16AF410027D398 /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,8 +32,8 @@
 		84B79F7D1C058E4400CAF4AA = {
 			isa = PBXGroup;
 			children = (
-				84B79F891C058E4400CAF4AA /* SwiftHEXColors */,
 				84B79F881C058E4400CAF4AA /* Products */,
+				84B79F891C058E4400CAF4AA /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,14 +45,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84B79F891C058E4400CAF4AA /* SwiftHEXColors */ = {
+		84B79F891C058E4400CAF4AA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				84B79F8C1C058E4400CAF4AA /* Info.plist */,
 				84B79F8A1C058E4400CAF4AA /* SwiftHEXColors.h */,
 				84B9178D1C16AF410027D398 /* SwiftHEXColors.swift */,
-				84B79F8C1C058E4400CAF4AA /* Info.plist */,
 			);
-			path = SwiftHEXColors;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +236,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftHEXColors/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = im.thi.SwiftHEXColors;
@@ -254,7 +254,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftHEXColors/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = im.thi.SwiftHEXColors;
