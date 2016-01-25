@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.9'
   s.requires_arc = true
-  s.source_files = "SwiftHEXColors/*.{h,swift}"
+  s.source_files = "Sources/*.{h,swift}"
 end
