@@ -68,6 +68,13 @@ class SwiftHEXColorsTests: XCTestCase {
         XCTAssertEqual(hexWhiteColor!, whiteColor)
     }
 
+
+    func testInitWithIntValue() {
+        let hex = 0x009C17
+        XCTAssertNotNil(SWColor(hex: hex))
+        XCTAssertEqual(SWColor(hex: hex), SWColor(hexString: "009C17"))
+    }
+
     // does string w/ # and w/o # results in same color
     func testWithAndWithoutHash() {
         let colorWithHash = SWColor(hexString: "#490d87")

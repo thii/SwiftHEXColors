@@ -108,7 +108,9 @@ public extension SWColor {
 	 - returns: color with the given hex value and alpha
 	 */
 	public convenience init?(hex: Int, alpha: Float) {
-		let hexString = NSString(format: "%2X", hex)
+		var hexString = String(format: "%2X", hex)
+        let leadingZerosString = String(count: 6 - hexString.characters.count, repeatedValue: Character("0"))
+        hexString = leadingZerosString + hexString
 		self.init(hexString: hexString as String , alpha: alpha)
 	}
 }
