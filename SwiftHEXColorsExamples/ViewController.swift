@@ -28,8 +28,11 @@ class ViewController: UIViewController {
     super.viewDidLoad()
   }
   
-  @IBAction func colorOne(sender: UIButton) {
-    view.backgroundColor = UIColor(hexString: sender.titleLabel!.text!)
+  @IBAction func colorOne(_ sender: UIButton) {
+    guard let title = sender.title(for: []) else {
+        return
+    }
+    view.backgroundColor = UIColor(hexString: title)
   }
 }
 
