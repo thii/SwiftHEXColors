@@ -52,23 +52,23 @@ public extension SWColor {
 
 		// Check for hash and remove the hash
 		if hex.hasPrefix("#") {
-            hex = hex.substring(from: hex.index(hex.startIndex, offsetBy: 1))
+			hex = hex.substring(from: hex.index(hex.startIndex, offsetBy: 1))
 		}
 
-        if (hex.range(of: "(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .regularExpressionSearch) != nil) {
+		if (hex.range(of: "(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .regularExpressionSearch) != nil) {
 
 			// Deal with 3 character Hex strings
 			if hex.characters.count == 3 {
-                let redHex   = hex.substring(to: hex.index(hex.startIndex, offsetBy: 1))
-                let greenHex = hex.substring(with: Range<String.Index>(hex.index(hex.startIndex, offsetBy: 1) ..< hex.index(hex.startIndex, offsetBy: 2)))
-                let blueHex  = hex.substring(from: hex.index(hex.startIndex, offsetBy: 2))
+				let redHex   = hex.substring(to: hex.index(hex.startIndex, offsetBy: 1))
+				let greenHex = hex.substring(with: Range<String.Index>(hex.index(hex.startIndex, offsetBy: 1) ..< hex.index(hex.startIndex, offsetBy: 2)))
+				let blueHex  = hex.substring(from: hex.index(hex.startIndex, offsetBy: 2))
 
 				hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
 			}
 
-            let redHex = hex.substring(to: hex.index(hex.startIndex, offsetBy: 2))
-            let greenHex = hex.substring(with: Range<String.Index>(hex.index(hex.startIndex, offsetBy: 2) ..< hex.index(hex.startIndex, offsetBy: 4)))
-            let blueHex = hex.substring(with: Range<String.Index>(hex.index(hex.startIndex, offsetBy: 4) ..< hex.index(hex.startIndex, offsetBy: 6)))
+			let redHex = hex.substring(to: hex.index(hex.startIndex, offsetBy: 2))
+			let greenHex = hex.substring(with: Range<String.Index>(hex.index(hex.startIndex, offsetBy: 2) ..< hex.index(hex.startIndex, offsetBy: 4)))
+			let blueHex = hex.substring(with: Range<String.Index>(hex.index(hex.startIndex, offsetBy: 4) ..< hex.index(hex.startIndex, offsetBy: 6)))
 
 			var redInt:   CUnsignedInt = 0
 			var greenInt: CUnsignedInt = 0
@@ -109,8 +109,8 @@ public extension SWColor {
 	 */
 	public convenience init?(hex: Int, alpha: Float) {
 		var hexString = String(format: "%2X", hex)
-        let leadingZerosString = String(repeating: Character("0"), count: 6 - hexString.characters.count)
-        hexString = leadingZerosString + hexString
+		let leadingZerosString = String(repeating: Character("0"), count: 6 - hexString.characters.count)
+		hexString = leadingZerosString + hexString
 		self.init(hexString: hexString as String , alpha: alpha)
 	}
 }
