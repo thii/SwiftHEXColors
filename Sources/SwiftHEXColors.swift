@@ -28,6 +28,12 @@
 	typealias SWColor = NSColor
 #endif
 
+private extension Int {
+	func duplicate4bits() -> Int {
+		return (self << 4) + self
+	}
+}
+
 /// An extension of UIColor (on iOS) or NSColor (on OSX) providing HEX color handling.
 public extension SWColor {
 	/**
@@ -40,6 +46,18 @@ public extension SWColor {
 		self.init(hexString: hexString, alpha: 1.0)
 	}
 
+	private convenience init?(hex3: Int, alpha: Float) {
+		self.init(red:   CGFloat( ((hex3 & 0xF00) >> 8).duplicate4bits() ) / 255.0,
+				  green: CGFloat( ((hex3 & 0x0F0) >> 4).duplicate4bits() ) / 255.0,
+				  blue:  CGFloat( ((hex3 & 0x00F) >> 0).duplicate4bits() ) / 255.0, alpha: CGFloat(alpha))
+	}
+	
+	private convenience init?(hex6: Int, alpha: Float) {
+		self.init(red:   CGFloat( (hex6 & 0xFF0000) >> 16 ) / 255.0,
+				  green: CGFloat( (hex6 & 0x00FF00) >> 8 ) / 255.0,
+				  blue:  CGFloat( (hex6 & 0x0000FF) >> 0 ) / 255.0, alpha: CGFloat(alpha))
+	}
+	
 	/**
 	 Create non-autoreleased color with in the given hex string and alpha.
 
@@ -54,33 +72,18 @@ public extension SWColor {
 		if hex.hasPrefix("#") {
 			hex = hex.substringFromIndex(hex.startIndex.advancedBy(1))
 		}
-
-		if (hex.rangeOfString("(^[0-9A-Fa-f]{6}$)|(^[0-9A-Fa-f]{3}$)", options: .RegularExpressionSearch) != nil) {
-
-			// Deal with 3 character Hex strings
-			if hex.characters.count == 3 {
-				let redHex   = hex.substringToIndex(hex.startIndex.advancedBy(1))
-				let greenHex = hex.substringWithRange(Range<String.Index>(hex.startIndex.advancedBy(1) ..< hex.startIndex.advancedBy(2)))
-				let blueHex  = hex.substringFromIndex(hex.startIndex.advancedBy(2))
-
-				hex = redHex + redHex + greenHex + greenHex + blueHex + blueHex
-			}
-
-			let redHex = hex.substringToIndex(hex.startIndex.advancedBy(2))
-            let greenHex = hex.substringWithRange(Range<String.Index>(hex.startIndex.advancedBy(2) ..< hex.startIndex.advancedBy(4)))
-            let blueHex = hex.substringWithRange(Range<String.Index>(hex.startIndex.advancedBy(4) ..< hex.startIndex.advancedBy(6)))
-
-			var redInt:   CUnsignedInt = 0
-			var greenInt: CUnsignedInt = 0
-			var blueInt:  CUnsignedInt = 0
-
-			NSScanner(string: redHex).scanHexInt(&redInt)
-			NSScanner(string: greenHex).scanHexInt(&greenInt)
-			NSScanner(string: blueHex).scanHexInt(&blueInt)
-
-			self.init(red: CGFloat(redInt) / 255.0, green: CGFloat(greenInt) / 255.0, blue: CGFloat(blueInt) / 255.0, alpha: CGFloat(alpha))
+		
+		guard let hexVal = Int(hex, radix: 16) else {
+			self.init()
+			return nil
 		}
-		else {
+		
+		switch hex.characters.count {
+		case 3:
+			self.init(hex3: hexVal, alpha: alpha)
+		case 6:
+			self.init(hex6: hexVal, alpha: alpha)
+		default:
 			// Note:
 			// The swift 1.1 compiler is currently unable to destroy partially initialized classes in all cases,
 			// so it disallows formation of a situation where it would have to.  We consider this a bug to be fixed
@@ -108,9 +111,11 @@ public extension SWColor {
 	 - returns: color with the given hex value and alpha
 	 */
 	public convenience init?(hex: Int, alpha: Float) {
-		var hexString = String(format: "%2X", hex)
-        let leadingZerosString = String(count: 6 - hexString.characters.count, repeatedValue: Character("0"))
-        hexString = leadingZerosString + hexString
-		self.init(hexString: hexString as String , alpha: alpha)
+		if (0x000000 ... 0xFFFFFF) ~= hex {
+			self.init(hex6: hex , alpha: alpha)
+		} else {
+			self.init()
+			return nil
+		}
 	}
 }

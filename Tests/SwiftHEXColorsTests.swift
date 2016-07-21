@@ -23,8 +23,65 @@
 import XCTest
 @testable import SwiftHEXColors
 
-class SwiftHEXColorsTests: XCTestCase {
+private let epsilon: CGFloat = 0.001
+private func ~=(c1: SWColor, c2: SWColor) -> Bool {
+    var a1: CGFloat = 0.0
+    var r1: CGFloat = 0.0
+    var g1: CGFloat = 0.0
+    var b1: CGFloat = 0.0
+    
+    c1.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
+    
+    var a2: CGFloat = 0.0
+    var r2: CGFloat = 0.0
+    var g2: CGFloat = 0.0
+    var b2: CGFloat = 0.0
+    
+    c2.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+    
+    for (c1, c2) in [(r1, r2), (g1, g2), (b1, b2), (a1, a2)] {
+        if abs(c1 - c2) >= epsilon {
+            return false
+        }
+    }
+    return true
+}
 
+class SwiftHEXColorsTests: XCTestCase {
+    
+    func testThat12bitColorIsInited() {
+        let color = SWColor(hexString: "#D4A", alpha: 0.88)
+        let expected = SWColor(red: 221.0 / 255.0, green: 68.0 / 255.0, blue: 170.0 / 255.0, alpha: 0.88)
+        XCTAssertTrue(color! ~= expected)
+    }
+    
+    func testThat24bitColorIsInited() {
+        let color = SWColor(hexString: "#81DAB9", alpha: 0.88)
+        let expected = SWColor(red: 129.0 / 255.0, green: 218.0 / 255.0, blue: 185.0 / 255.0, alpha: 0.88)
+        XCTAssertTrue(color! ~= expected)
+    }
+    
+    func testThat16bitColorIsNil() {
+        let color = SWColor(hexString: "#78A2", alpha: 0.33)
+        XCTAssertNil(color)
+    }
+    
+    func testThatNotHexSymbolProducesNil() {
+        let color = SWColor(hexString: "#FFF&FF", alpha: 0.88)
+        XCTAssertNil(color)
+    }
+    
+    func testThatTooBigIntColorIsNil() {
+        let color = SWColor(hex: 0xFFFFFFD, alpha: 0.2)
+        XCTAssertNil(color)
+    }
+    
+    func testThatHexIntColorIsInited() {
+        let color = SWColor(hex: 0x94D88A, alpha: 0.3)
+        let expected = SWColor(red: 148.0 / 255.0, green: 216.0 / 255.0, blue: 138.0 / 255.0, alpha: 0.3)
+        XCTAssertTrue(color! ~= expected)
+    }
+    
     // is alpha equals to 1 by default after init
     func testAlphaInHexStringInit() {
         let hexBlackColor = SWColor(hexString: "000000")
