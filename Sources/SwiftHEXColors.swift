@@ -70,7 +70,7 @@ public extension SWColor {
 
 		// Check for hash and remove the hash
 		if hex.hasPrefix("#") {
-			hex = hex.substringFromIndex(hex.startIndex.advancedBy(1))
+			hex = hex.substring(from: hex.index(hex.startIndex, offsetBy: 1))
 		}
 		
 		guard let hexVal = Int(hex, radix: 16) else {
