@@ -3,4 +3,4 @@
 language: objective-c
 osx_image: xcode8
 script:
-- xctool test -project SwiftHEXColors.xcodeproj -scheme SwiftHEXColors -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xcodebuild clean test -project SwiftHEXColors.xcodeproj -scheme SwiftHEXColors -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' ONLY_ACTIVE_ARCH=NO
