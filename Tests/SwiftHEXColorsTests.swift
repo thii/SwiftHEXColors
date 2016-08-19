@@ -112,7 +112,7 @@ class SwiftHEXColorsTests: XCTestCase {
 
     // test how Apple might create the black color
     func testBlackColorAppleWay() {
-        let blackColor1 = SWColor.blackColor()
+        let blackColor1 = SWColor.black
         let blackColor2 = SWColor(white: 0.0, alpha: 1.0)
         XCTAssertEqual(blackColor1, blackColor2)
     }
