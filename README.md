@@ -114,7 +114,8 @@ Run `carthage update` to build the framework and drag the built `SwiftHEXColors.
 - Drag and drop `SwiftHEXColors.swift` file into your project
 
 # Requirements
-iOS 8.0 or above.
+- Swift 3
+- iOS 8.0 or above.
 
 # License
 [MIT](http://thi.mit-license.org/)
