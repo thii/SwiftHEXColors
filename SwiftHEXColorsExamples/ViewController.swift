@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
   }
   
-  @IBAction func colorOne(sender: UIButton) {
+  @IBAction func colorOne(_ sender: UIButton) {
     view.backgroundColor = UIColor(hexString: sender.titleLabel!.text!)
   }
 }
