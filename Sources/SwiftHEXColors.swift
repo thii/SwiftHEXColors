@@ -49,7 +49,8 @@ public extension SWColor {
 	fileprivate convenience init?(hex3: Int, alpha: Float) {
 		self.init(red:   CGFloat( ((hex3 & 0xF00) >> 8).duplicate4bits() ) / 255.0,
 				  green: CGFloat( ((hex3 & 0x0F0) >> 4).duplicate4bits() ) / 255.0,
-				  blue:  CGFloat( ((hex3 & 0x00F) >> 0).duplicate4bits() ) / 255.0, alpha: CGFloat(alpha))
+				  blue:  CGFloat( ((hex3 & 0x00F) >> 0).duplicate4bits() ) / 255.0,
+				  alpha: CGFloat(alpha))
 	}
 	
 	fileprivate convenience init?(hex6: Int, alpha: Float) {
@@ -112,7 +113,7 @@ public extension SWColor {
 	 */
 	public convenience init?(hex: Int, alpha: Float) {
 		if (0x000000 ... 0xFFFFFF) ~= hex {
-			self.init(hex6: hex , alpha: alpha)
+			self.init(hex6: hex, alpha: alpha)
 		} else {
 			self.init()
 			return nil
