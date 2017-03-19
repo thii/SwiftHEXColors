@@ -1,6 +1,4 @@
-# reference: http://www.objc.io/issue-6/travis-ci.html
-
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.2
 script:
-- xcodebuild clean test -project SwiftHEXColors.xcodeproj -scheme SwiftHEXColors -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=10.0' ONLY_ACTIVE_ARCH=NO
+- bundle exec fastlane test

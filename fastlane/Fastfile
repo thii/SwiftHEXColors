@@ -1,0 +1,9 @@
+lane :test do
+  scan(
+    project: "SwiftHEXColors.xcodeproj",
+    scheme: "SwiftHEXColors",
+    device: "iPhone 7",
+    include_simulator_logs: false,
+    code_coverage: true
+  )
+end
