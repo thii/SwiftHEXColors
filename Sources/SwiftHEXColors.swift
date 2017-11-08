@@ -79,7 +79,7 @@ public extension SWColor {
 			return nil
 		}
 		
-		switch hex.characters.count {
+		switch hex.count {
 		case 3:
 			self.init(hex3: hexVal, alpha: alpha)
 		case 6:
