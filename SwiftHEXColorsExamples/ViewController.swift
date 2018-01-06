@@ -23,13 +23,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
-  @IBAction func colorOne(_ sender: UIButton) {
-    view.backgroundColor = UIColor(hexString: sender.titleLabel!.text!)
-  }
-}
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    @IBAction func colorOne(_ sender: UIButton) {
+        view.backgroundColor = UIColor(hexString: sender.titleLabel!.text!)
+    }
+}
