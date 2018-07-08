@@ -6,4 +6,5 @@ lane :test do
     include_simulator_logs: false,
     code_coverage: true
   )
+  pod_lib_lint allow_warnings: true
 end
