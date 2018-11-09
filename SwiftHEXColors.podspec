@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SwiftHEXColors"
-  s.version          = "1.1.2"
+  s.version          = "1.2.0"
   s.summary          = "HEX color handling as an extension for UIColor. Written in Swift."
   s.homepage         = "https://github.com/thii/SwiftHEXColors"
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.requires_arc = true
   s.source_files = "Sources/*.{h,swift}"
-  s.swift_version = "4.0"
+  s.swift_version = "4.2"
 end
