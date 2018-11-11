@@ -1,3 +1,4 @@
+desc "Run all tests"
 lane :test do
   scan(
     project: "SwiftHEXColors.xcodeproj",
@@ -7,4 +8,24 @@ lane :test do
     code_coverage: true
   )
   pod_lib_lint allow_warnings: true
+end
+
+desc "Release a new version"
+lane :release do |options|
+  target_version = options[:version]
+  raise "The version is missed. Use `bundle exec fastlane release version:{version_number}`.`" if target_version.nil?
+
+  ensure_git_branch
+  ensure_git_status_clean
+
+  test
+  pod_lib_lint
+
+  version_bump_podspec(path: "SwiftHEXColors.podspec", version_number: target_version)
+
+  git_commit(path: ".", message: "[bot] Bump version to #{target_version}")
+  add_git_tag(tag: target_version, message: target_version)
+  push_to_git_remote
+
+  pod_push(use_bundle_exec: true)
 end
