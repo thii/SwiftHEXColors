@@ -25,7 +25,7 @@ lane :release do |options|
 
   git_commit(path: ".", message: "[bot] Bump version to #{target_version}")
   add_git_tag(tag: target_version, message: target_version)
-  push_to_git_remote
+  sh("git push origin #{target_version}")
 
   pod_push(use_bundle_exec: true)
 end
