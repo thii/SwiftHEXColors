@@ -82,6 +82,7 @@ class SwiftHEXColorsTests: XCTestCase {
         XCTAssertTrue(color! ~= expected)
     }
 
+#if os(macOS)
     // is alpha equals to 1 by default after init
     func testAlphaInHexStringInit() {
         let hexBlackColor = SWColor(hexString: "000000")?.usingColorSpaceName(.calibratedWhite)
@@ -102,6 +103,7 @@ class SwiftHEXColorsTests: XCTestCase {
         let expectedAlpha: CGFloat = 0.5
         XCTAssertEqual(alpha, expectedAlpha)
     }
+#endif
 
     func testBlackColor() {
         let hexBlackColor = SWColor(hexString: "000000")
