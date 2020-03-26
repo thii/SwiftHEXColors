@@ -28,39 +28,39 @@
     typealias SWColor = NSColor
 #endif
 
-private extension Int {
-    func duplicate4bits() -> Int {
+private extension Int64 {
+    func duplicate4bits() -> Int64 {
         return (self << 4) + self
     }
 }
 
 /// An extension of UIColor (on iOS) or NSColor (on OSX) providing HEX color handling.
 public extension SWColor {
-    private convenience init?(hex3: Int, alpha: Float) {
+    private convenience init?(hex3: Int64, alpha: Float) {
         self.init(red:   CGFloat( ((hex3 & 0xF00) >> 8).duplicate4bits() ) / 255.0,
                   green: CGFloat( ((hex3 & 0x0F0) >> 4).duplicate4bits() ) / 255.0,
                   blue:  CGFloat( ((hex3 & 0x00F) >> 0).duplicate4bits() ) / 255.0,
                   alpha: CGFloat(alpha))
     }
 
-    private convenience init?(hex4: Int, alpha: Float?) {
+    private convenience init?(hex4: Int64, alpha: Float?) {
         self.init(red:   CGFloat( ((hex4 & 0xF000) >> 12).duplicate4bits() ) / 255.0,
                   green: CGFloat( ((hex4 & 0x0F00) >> 8).duplicate4bits() ) / 255.0,
                   blue:  CGFloat( ((hex4 & 0x00F0) >> 4).duplicate4bits() ) / 255.0,
-                  alpha: alpha.map(CGFloat.init) ?? CGFloat( ((hex4 & 0x000F) >> 0).duplicate4bits() ) / 255.0)
+                  alpha: alpha.map(CGFloat.init(_:)) ?? CGFloat( ((hex4 & 0x000F) >> 0).duplicate4bits() ) / 255.0)
     }
 
-    private convenience init?(hex6: Int, alpha: Float) {
+    private convenience init?(hex6: Int64, alpha: Float) {
         self.init(red:   CGFloat( (hex6 & 0xFF0000) >> 16 ) / 255.0,
                   green: CGFloat( (hex6 & 0x00FF00) >> 8 ) / 255.0,
                   blue:  CGFloat( (hex6 & 0x0000FF) >> 0 ) / 255.0, alpha: CGFloat(alpha))
     }
 
-    private convenience init?(hex8: Int, alpha: Float?) {
+    private convenience init?(hex8: Int64, alpha: Float?) {
         self.init(red:   CGFloat( (hex8 & 0xFF000000) >> 24 ) / 255.0,
                   green: CGFloat( (hex8 & 0x00FF0000) >> 16 ) / 255.0,
                   blue:  CGFloat( (hex8 & 0x0000FF00) >> 8 ) / 255.0,
-                  alpha: alpha.map(CGFloat.init) ?? CGFloat( (hex8 & 0x000000FF) >> 0 ) / 255.0)
+                  alpha: alpha.map(CGFloat.init(_:)) ?? CGFloat( (hex8 & 0x000000FF) >> 0 ) / 255.0)
     }
 
     /**
@@ -78,7 +78,7 @@ public extension SWColor {
             hex = String(hex[hex.index(after: hex.startIndex)...])
         }
 
-        guard let hexVal = Int(hex, radix: 16) else {
+        guard let hexVal = Int64(hex, radix: 16) else {
             self.init()
             return nil
         }
@@ -111,7 +111,7 @@ public extension SWColor {
      */
     convenience init?(hex: Int, alpha: Float = 1.0) {
         if (0x000000 ... 0xFFFFFF) ~= hex {
-            self.init(hex6: hex, alpha: alpha)
+            self.init(hex6: Int64(hex), alpha: alpha)
         } else {
             self.init()
             return nil
