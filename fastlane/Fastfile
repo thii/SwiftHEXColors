@@ -19,7 +19,6 @@ lane :release do |options|
   ensure_git_status_clean
 
   test
-  pod_lib_lint
 
   version_bump_podspec(path: "SwiftHEXColors.podspec", version_number: target_version)
 
