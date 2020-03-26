@@ -61,9 +61,28 @@ class SwiftHEXColorsTests: XCTestCase {
         XCTAssertTrue(color! ~= expected)
     }
 
-    func testThat16bitColorIsNil() {
-        let color = SWColor(hexString: "#78A2", alpha: 0.33)
-        XCTAssertNil(color)
+    func testThat16bitColorIsInited() {
+        let color = SWColor(hexString: "#78A2")
+        let expected = SWColor(red: 119 / 255.0, green: 136 / 255.0, blue: 170 / 255.0, alpha: 34 / 255.0)
+        XCTAssertTrue(color! ~= expected)
+    }
+
+    func testThat32bitColorIsInited() {
+        let color = SWColor(hexString: "#81DAB9CC")
+        let expected = SWColor(red: 129.0 / 255.0, green: 218.0 / 255.0, blue: 185.0 / 255.0, alpha: 204 / 255.0)
+        XCTAssertTrue(color! ~= expected)
+    }
+
+    func testThatProvidedAlphaOverrides16bitColorAlpha() {
+        let color = SWColor(hexString: "#78A2", alpha: 0.9)
+        let expected = SWColor(red: 119 / 255.0, green: 136 / 255.0, blue: 170 / 255.0, alpha: 0.9)
+        XCTAssertTrue(color! ~= expected)
+    }
+
+    func testThatProvidedAlphaOverrides32bitColorAlpha() {
+        let color = SWColor(hexString: "#81DAB9CC", alpha: 0.2)
+        let expected = SWColor(red: 129.0 / 255.0, green: 218.0 / 255.0, blue: 185.0 / 255.0, alpha: 0.2)
+        XCTAssertTrue(color! ~= expected)
     }
 
     func testThatNotHexSymbolProducesNil() {
