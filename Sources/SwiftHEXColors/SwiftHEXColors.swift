@@ -117,4 +117,36 @@ public extension SWColor {
             return nil
         }
     }
+    
+    convenience init?(ARGBhex: Int) {
+        if (0x00000000 ... 0xFFFFFFFF) ~= ARGBhex {
+            let hex = Int64(ARGBhex)
+            self.init(red: CGFloat( (hex & 0x00FF0000) >> 16 ) / 255.0,
+                      green: CGFloat( (hex & 0x0000FF00) >> 8 ) / 255.0,
+                      blue:  CGFloat( (hex & 0x000000FF) >> 0 ) / 255.0,
+                      alpha: CGFloat( (hex & 0xFF000000) >> 24 ) / 255.0)
+        } else {
+            self.init()
+            return nil
+        }
+    }
+    
+    convenience init?(ARGBhexString: String) {
+        var hex = ARGBhexString
+
+        // Check for hash and remove the hash
+        if hex.hasPrefix("#") {
+            hex = String(hex[hex.index(after: hex.startIndex)...])
+        }
+        
+        guard hex.count == 8, let hexVal = Int64(hex, radix: 16) else {
+            self.init()
+            return nil
+        }
+        self.init(red: CGFloat( (hexVal & 0x00FF0000) >> 16 ) / 255.0,
+                  green: CGFloat( (hexVal & 0x0000FF00) >> 8 ) / 255.0,
+                  blue:  CGFloat( (hexVal & 0x000000FF) >> 0 ) / 255.0,
+                  alpha: CGFloat( (hexVal & 0xFF000000) >> 24 ) / 255.0)
+    }
+    
 }
