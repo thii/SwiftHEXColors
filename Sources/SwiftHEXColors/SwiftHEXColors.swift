@@ -118,9 +118,9 @@ public extension SWColor {
         }
     }
     
-    convenience init?(ARGBhex: Int) {
-        if (0x00000000 ... 0xFFFFFFFF) ~= ARGBhex {
-            let hex = Int64(ARGBhex)
+    convenience init?(argbHex: Int) {
+        if (0x00000000 ... 0xFFFFFFFF) ~= argbHex {
+            let hex = Int64(argbHex)
             self.init(red: CGFloat( (hex & 0x00FF0000) >> 16 ) / 255.0,
                       green: CGFloat( (hex & 0x0000FF00) >> 8 ) / 255.0,
                       blue:  CGFloat( (hex & 0x000000FF) >> 0 ) / 255.0,
@@ -131,8 +131,8 @@ public extension SWColor {
         }
     }
     
-    convenience init?(ARGBhexString: String) {
-        var hex = ARGBhexString
+    convenience init?(argbHexString: String) {
+        var hex = argbHexString
 
         // Check for hash and remove the hash
         if hex.hasPrefix("#") {
