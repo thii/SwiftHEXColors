@@ -100,6 +100,18 @@ class SwiftHEXColorsTests: XCTestCase {
         let expected = SWColor(red: 148.0 / 255.0, green: 216.0 / 255.0, blue: 138.0 / 255.0, alpha: 0.3)
         XCTAssertTrue(color! ~= expected)
     }
+    
+    func testArgbHexString() {
+        let color = SWColor(argbHexString: "CC81DAB9")
+        let expected = SWColor(red: 129.0 / 255.0, green: 218.0 / 255.0, blue: 185.0 / 255.0, alpha: 204 / 255.0)
+        XCTAssertTrue(color! ~= expected)
+    }
+    
+    func testArgbHex() {
+        let color = SWColor(argbHex: 0xCC81DAB9)
+        let expected = SWColor(red: 129.0 / 255.0, green: 218.0 / 255.0, blue: 185.0 / 255.0, alpha: 204 / 255.0)
+        XCTAssertTrue(color! ~= expected)
+    }
 
 #if os(macOS)
     // is alpha equals to 1 by default after init
